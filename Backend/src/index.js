@@ -29,10 +29,10 @@ const port = process.env.PORT;
 //Making frontend as a static file and place it in the backend codebase
 const __dirname = path.resolve();
 if(process.env.NODE_ENV=="production"){
-  App.use(express.static(path.join(__dirname,"../frontend/dist")));
+  App.use(express.static(path.join(__dirname,"../Frontend/dist")));
 
   App.get(/(.*)/,(req,res)=>{
-      res.sendFile(path.join(__dirname,"../frontend","dist","index.html"));
+      res.sendFile(path.join(__dirname,"../Frontend","dist","index.html"));
   });
 }
 
